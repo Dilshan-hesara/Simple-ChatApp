@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="531.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.cw.simplechatapp.controller.clientConrroller">
+<AnchorPane prefHeight="531.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.cw.simplechatapp.controller.client2Conrroller">
    <children>
-      <Label layoutX="359.0" layoutY="30.0" text="CLIENT 01 ">
+      <Label layoutX="359.0" layoutY="30.0" text="CLIENT 02 ">
          <font>
             <Font size="24.0" />
          </font>
