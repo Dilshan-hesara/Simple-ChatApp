@@ -7,10 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -66,6 +66,29 @@ public class serverConrroller {
             txtmsg.clear();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void filedbtnOnAction(ActionEvent event) {
+
+        FileChooser fileChooser = new FileChooser();
+
+        File file = fileChooser.showOpenDialog(new Stage());
+
+
+        if (file != null) {
+            new Thread(() -> {
+
+                try {
+                    FileInputStream fileInputStream = new FileInputStream(file);
+                    System.out.println(file);
+
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+
+            });
         }
     }
 }
