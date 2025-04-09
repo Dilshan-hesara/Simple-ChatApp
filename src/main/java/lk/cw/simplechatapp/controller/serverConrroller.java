@@ -37,11 +37,11 @@ public class serverConrroller {
                 input = new DataInputStream(socket.getInputStream());
                 output = new DataOutputStream(socket.getOutputStream());
 
-                txtArea.appendText("Client connected...");
+                txtArea.appendText("Client connected..." +"\n" );
 
                 while (true) {
                     String msg = input.readUTF();
-                    Platform.runLater(() -> txtArea.setText("Client: " + msg ));
+                  txtArea.appendText("Client: " + msg +"\n");
 
 
 
@@ -64,7 +64,7 @@ public class serverConrroller {
         try {
             output.writeUTF(msg);
             output.flush();
-            txtArea.appendText("Server: " + msg );
+            txtArea.appendText("Server: " + msg+"\n" );
             txtmsg.clear();
         } catch (IOException e) {
             e.printStackTrace();

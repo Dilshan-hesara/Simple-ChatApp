@@ -37,7 +37,7 @@ public class clientConrroller {
 
                 while (true) {
                     String msg = input.readUTF();
-                    Platform.runLater(() -> txtArea.setText("Server : "+ msg ));
+                   txtArea.appendText("Server : "+ msg+"\n" );
 
                     if (msg.equalsIgnoreCase("exit")) {
                         break;
@@ -56,7 +56,7 @@ public class clientConrroller {
         try {
             output.writeUTF(msg);
             output.flush();
-            txtArea.appendText("Client: " + msg );
+            txtArea.appendText("Client: " + msg +"\n");
             txtmsg.clear();
         } catch (IOException e) {
             e.printStackTrace();
