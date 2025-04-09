@@ -44,10 +44,6 @@ public class serverConrroller {
                   txtArea.appendText("Client: " + msg +"\n");
 
 
-
-                    if (msg.equalsIgnoreCase("exit")) {
-                        break;
-                    }
                 }
 
             } catch (IOException e) {
@@ -62,8 +58,10 @@ public class serverConrroller {
     void sendbtnOnAction() {
         String msg = txtmsg.getText();
         try {
-            output.writeUTF(msg);
+            output.writeUTF(msg); //send client msg
             output.flush();
+
+
             txtArea.appendText("Server: " + msg+"\n" );
             txtmsg.clear();
         } catch (IOException e) {

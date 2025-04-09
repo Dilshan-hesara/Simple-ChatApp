@@ -39,9 +39,7 @@ public class clientConrroller {
                     String msg = input.readUTF();
                    txtArea.appendText("Server : "+ msg+"\n" );
 
-                    if (msg.equalsIgnoreCase("exit")) {
-                        break;
-                    }
+
                 }
 
             } catch (IOException e) {
@@ -55,9 +53,12 @@ public class clientConrroller {
         String msg = txtmsg.getText();
         try {
             output.writeUTF(msg);
-            output.flush();
+            output.flush();// send server msg
+
+
             txtArea.appendText("Client: " + msg +"\n");
             txtmsg.clear();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
