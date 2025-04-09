@@ -14,6 +14,14 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        Parent serverRoot = FXMLLoader.load(App.class.getResource("/view/server.fxml"));
+        Stage serverStage = new Stage();
+        serverStage.setScene(new Scene(serverRoot));
+        serverStage.setTitle("Server");
+        serverStage.setResizable(false);
+        serverStage.show();
+
+
         Parent clientRoot = FXMLLoader.load(App.class.getResource("/view/client.fxml"));
         Stage clientStage = new Stage();
         clientStage.setScene(new Scene(clientRoot));
@@ -21,12 +29,6 @@ public class App extends Application {
         clientStage.setResizable(false);
         clientStage.show();
 
-        Parent serverRoot = FXMLLoader.load(App.class.getResource("/view/server.fxml"));
-        Stage serverStage = new Stage();
-        serverStage.setScene(new Scene(serverRoot));
-        serverStage.setTitle("Server");
-        serverStage.setResizable(false);
-        serverStage.show();
 
     }
 
