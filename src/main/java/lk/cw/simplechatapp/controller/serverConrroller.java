@@ -41,7 +41,7 @@ public class serverConrroller {
 
                 while (true) {
                     String msg = input.readUTF();
-                  txtArea.appendText("Client: " + msg +"\n");
+                  txtArea.appendText("Client 01 : " + msg +"\n");
 
 
                 }

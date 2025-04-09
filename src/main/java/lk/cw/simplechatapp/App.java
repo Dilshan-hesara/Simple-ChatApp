@@ -29,6 +29,13 @@ public class App extends Application {
         clientStage.setResizable(false);
         clientStage.show();
 
+        Parent clientRoot2 = FXMLLoader.load(App.class.getResource("/view/client2.fxml"));
+        Stage client2 = new Stage();
+        client2.setScene(new Scene(clientRoot2));
+        client2.setTitle("Client2");
+        client2.setResizable(false);
+        client2.show();
+
 
     }
 

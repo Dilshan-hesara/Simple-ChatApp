@@ -56,7 +56,7 @@ public class clientConrroller {
             output.flush();// send server msg
 
 
-            txtArea.appendText("Client: " + msg +"\n");
+            txtArea.appendText("Client 01 : " + msg +"\n");
             txtmsg.clear();
 
         } catch (IOException e) {
